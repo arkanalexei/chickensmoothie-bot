@@ -12,7 +12,7 @@ import beepy
 # Number of minutes under which the program should send a reminder
 LIMIT_IN_MINUTES = 25
 # How frequent the program should run a check.
-DELAY_IN_MINUTES = 1
+DELAY_IN_MINUTES = 1./6
 
 def clean(str):
     ''' Remove line breaks and other junk from the string returned by 
@@ -30,6 +30,7 @@ def clean(str):
 
 def get_msg():
     ''' Obtains the Pound / Lost & Found's status by making a GET request to the webpage.'''
+    
     CLOSED_MSG = "Sorry,"
     r = requests.get("https://www.chickensmoothie.com/poundandlostandfound.php")
     content = str(r.content)
@@ -50,6 +51,7 @@ def get_msg():
 
 def is_opening_soon():
     ''' Returns True if Pound/L&F will open within LIMIT_IN_MINUTES, and False otherwise.'''
+    
     msg = get_msg().split(" ")
     
     isUnitInMinutes = "minu" in msg[-1]

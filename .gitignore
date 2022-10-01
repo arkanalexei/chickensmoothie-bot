@@ -1,1 +1,6 @@
 .env
+env
+requirements.txt
+irrelevant/
+.ipynb_checkpoints
+__pycache__
