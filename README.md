@@ -8,5 +8,5 @@ This bot serves as a timer for the all time hit web game Chicken Smoothie. Adopt
 Prefix is $$. To use timer, type $$timer (time). To reset prefix, type $$prefix (prefix). Enhoy!
 
 # Author
-[@arkanalexei](github.com/arkanalexei)
+NOT arkanalexei
 
